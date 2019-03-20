@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'DVGCamera'
-  s.version          = '0.1.1'
-  s.summary          = 'Live Streaming Camera.'
+  s.name             = 'MZRTC'
+  s.version          = '0.1.3'
+  s.summary          = 'P2P & M2M WebRTC client sdk.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Live Streaming Camera.
+This is the client sdk for MobZ p2p and m2m webrtc service.
                        DESC
 
-  s.homepage         = 'https://github.com/cvoalex/DVGCameraLib'
+  s.homepage         = 'https://github.com/cvoalex/MZRTCLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'derek-x-wang' => 'derekxinzhewang@gmail.com' }
-  s.source           = { :git => 'https://github.com/cvoalex/DVGCameraLib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/cvoalex/MZRTCLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
-  s.ios.vendored_frameworks = 'DVGCamera.framework'
+  s.ios.vendored_frameworks = 'MZRTC.framework'
 
-  s.dependency 'DVGCore'
-  s.dependency 'GPUImage'
+  s.dependency 'GoogleWebRTC'
+  s.dependency 'Socket.IO-Client-Swift', '~> 13.3.0'
 end
