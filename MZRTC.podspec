@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MZRTC'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'P2P & M2M WebRTC client sdk.'
 
 # This description is used to generate tags and improve search results.
@@ -28,6 +28,7 @@ This is the client sdk for MobZ p2p and m2m webrtc service.
   s.source           = { :git => 'https://github.com/cvoalex/MZRTCLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
+  s.swift_version = '4.2'
   s.ios.deployment_target = '10.0'
   s.ios.vendored_frameworks = 'MZRTC.framework'
 
