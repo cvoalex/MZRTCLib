@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint DVGCamera.podspec' to ensure this is a
+# Be sure to run `pod lib lint MZRTC.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'MZRTC'
   s.version          = '0.1.6'
-  s.summary          = 'P2P & M2M WebRTC client sdk.'
+  s.summary          = 'A short description of MZRTC.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,20 +18,30 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This is the client sdk for MobZ p2p and m2m webrtc service.
+TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/cvoalex/MZRTCLib'
+  s.homepage         = 'https://github.com/derek-x-wang/MZRTC'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'derek-x-wang' => 'derekxinzhewang@gmail.com' }
-  s.source           = { :git => 'https://github.com/cvoalex/MZRTCLib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/derek-x-wang/MZRTC.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.swift_version = '4.2'
   s.ios.deployment_target = '10.0'
-  s.ios.vendored_frameworks = 'MZRTC.framework'
 
+  s.source_files = 'MZRTC/Classes/**/*'
+  
+  s.xcconfig = {
+      'ENABLE_BITCODE' => 'NO'
+  }
+  # s.resource_bundles = {
+  #   'MZRTC' => ['MZRTC/Assets/*.png']
+  # }
+
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'GoogleWebRTC'
-  s.dependency 'Socket.IO-Client-Swift', '~> 14.0.0'
+  s.dependency 'Starscream'
 end
