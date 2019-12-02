@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MZRTC'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'P2P & M2M WebRTC client sdk.'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,15 @@ This is the client sdk for MobZ p2p and m2m webrtc service.
 
   s.swift_version = '4.2'
   s.ios.deployment_target = '10.0'
+
+  s.source_files = 'MZRTC/Classes/**/*'
+
   s.ios.vendored_frameworks = 'MZRTC.framework'
 
+  s.xcconfig = {
+      'ENABLE_BITCODE' => 'NO'
+  }
+
   s.dependency 'GoogleWebRTC'
-  s.dependency 'Socket.IO-Client-Swift', '~> 14.0.0'
+  s.dependency 'Starscream'
 end
