@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "RTCFrameUtil.h"
 
 FOUNDATION_EXPORT double MZRTCVersionNumber;
 FOUNDATION_EXPORT const unsigned char MZRTCVersionString[];
